@@ -6,11 +6,11 @@ public class DataService : ISprint4Task2V3
     {
         int sum = 0;
 
-        foreach (int num in array)
+        for (int i = 0; i < array.Length; i++)
         {
-            if (num % 2 == 0) // Проверка на четность
+            if (array[i] % 2 == 0)
             {
-                sum += num;
+                sum = sum + array[i];
             }
         }
 
