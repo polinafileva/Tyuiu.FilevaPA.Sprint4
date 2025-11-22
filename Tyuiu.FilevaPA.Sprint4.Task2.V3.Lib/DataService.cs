@@ -10,7 +10,7 @@ public class DataService : ISprint4Task2V3
         {
             if (array[i] % 2 == 0)
             {
-                sum = sum + array[i];
+                sum += array[i];
             }
         }
 

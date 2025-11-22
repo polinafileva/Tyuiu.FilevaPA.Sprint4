@@ -6,11 +6,22 @@ public sealed class DataServiceTest
     [TestMethod]
     public void TestMethod1()
     {
-        Tyuiu.FilevaPA.Sprint4.Task2.V3.Lib.DataService ds = new Tyuiu.FilevaPA.Sprint4.Task2.V3.Lib.DataService();
+        DataService ds = new DataService();
 
-        int[] array = { 2, 4, 6, 2, 4, 6, 2, 4, 6, 2, 4, 6 };
+        int[] array = { 2, 5, 3, 6, 2, 7, 4, 3, 6, 5, 4, 7 };
         int result = ds.Calculate(array);
 
-        Assert.AreEqual(48, result);
+        Assert.AreEqual(24, result);
+    }
+
+    [TestMethod]
+    public void ValidCalculateEmpty()
+    {
+        DataService ds = new DataService();
+
+        int[] array = { };
+        int result = ds.Calculate(array);
+
+        Assert.AreEqual(0, result);
     }
 }
